@@ -31,18 +31,27 @@ namespace itacademy.gui
 			{
 				dbConnection.Open();
 
+				var records = new List<StudentsLogRecord>();
+
 				using(var command = dbConnection.CreateCommand())
 				{
 					// Fix-me: напиши запрос.
 					command.CommandText = "SELECT * FROM Что-нибудь";
 					using(var reader = command.ExecuteReader())
 					{
-						if(reader.Read())
+						while(reader.Read())
 						{
+							records.Add(new StudentsLogRecord()
+							{
+								X = reader["X"].ToString(),
+								Timestamp = DateTime.Parse(reader["Timestamp"].ToString()),
+							});
+
 							// Fix-me
 						}
-					}
 
+						return records;
+					}
 				}
 			}
 		}

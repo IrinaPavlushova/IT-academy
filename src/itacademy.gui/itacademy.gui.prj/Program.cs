@@ -27,17 +27,17 @@ namespace itacademy.gui
 			var containerBuilder = new ContainerBuilder();
 
 			containerBuilder
-				.RegisterType<B>()
-				.AsSelf();
+				.RegisterType<AppBootsrapper>()
+				.As<IAppBootsrapper>();
 
 			containerBuilder
-				.RegisterType<A>()
-				.AsSelf()
-				.As<IC>();
+				.RegisterType<MainFormFactory>()
+				.As<IMainFormFactory>();
 
 			containerBuilder
-				.RegisterModule<NModule>();
-
+				.RegisterType<ViewResolver>()
+				.As<IViewResolver>();
+			
 			containerBuilder.RegisterInstance<B>(new B());
 
 			return containerBuilder.Build();
@@ -50,17 +50,13 @@ namespace itacademy.gui
 		static void Main()
 		{
 			var container = CreateContainer();
-			var c = container.Resolve<A>();
 
-			IList<string> list = new List<string>();
-			list.Add("1234");
-			list.Add("54321");
+			var bootstrapper = container.Resolve<IAppBootsrapper>();
 
-			list.Print();
+			bootstrapper.Run();
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
 		}
 	}
 }

@@ -16,5 +16,20 @@ namespace itacademy.gui
 		{
 			InitializeComponent();
 		}
+
+		private void DialogFormTest1_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void _btnCancel_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void _btnOk_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

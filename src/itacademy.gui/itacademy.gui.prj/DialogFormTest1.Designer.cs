@@ -41,15 +41,18 @@
 			this._btnOk.TabIndex = 0;
 			this._btnOk.Text = "OK";
 			this._btnOk.UseVisualStyleBackColor = true;
+			this._btnOk.Click += new System.EventHandler(this._btnOk_Click);
 			// 
 			// _btnCancel
 			// 
+			this._btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this._btnCancel.Location = new System.Drawing.Point(197, 226);
 			this._btnCancel.Name = "_btnCancel";
 			this._btnCancel.Size = new System.Drawing.Size(75, 23);
 			this._btnCancel.TabIndex = 1;
 			this._btnCancel.Text = "Cancel";
 			this._btnCancel.UseVisualStyleBackColor = true;
+			this._btnCancel.Click += new System.EventHandler(this._btnCancel_Click);
 			// 
 			// DialogFormTest1
 			// 
@@ -66,6 +69,7 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "DialogFormTest1";
+			this.Load += new System.EventHandler(this.DialogFormTest1_Load);
 			this.ResumeLayout(false);
 
 		}

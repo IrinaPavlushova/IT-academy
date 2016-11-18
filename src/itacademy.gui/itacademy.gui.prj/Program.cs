@@ -49,14 +49,12 @@ namespace itacademy.gui
 		[STAThread]
 		static void Main()
 		{
-			var container = CreateContainer();
+			using(var container = CreateContainer())
+			{
+				var bootstrapper = container.Resolve<IAppBootsrapper>();
 
-			var bootstrapper = container.Resolve<IAppBootsrapper>();
-
-			bootstrapper.Run();
-
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
+				bootstrapper.Run();
+			}
 		}
 	}
 }

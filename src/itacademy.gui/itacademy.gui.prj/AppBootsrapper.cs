@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace itacademy.gui
 {
@@ -22,10 +23,10 @@ namespace itacademy.gui
 
 		public void Run()
 		{
-			using(var mainForm = MainFormFactory.CreateMainForm())
-			{
-				mainForm.ShowDialog();
-			}
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
+			Application.Run(MainFormFactory.CreateMainForm());
 		}
 	}
 }

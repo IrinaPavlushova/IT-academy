@@ -37,7 +37,7 @@ namespace itacademy.gui
 		protected override void OnLoad(EventArgs e)
 		{
 			MinimumSize = Size;
-
+			MaximumSize = Size;
 			base.OnLoad(e);
 
 			
@@ -89,5 +89,33 @@ namespace itacademy.gui
 		}
 
 		#endregion
+
+		private void OnButtonProgressBar(object sender, EventArgs e)
+		{
+			var progress = new Progress<ProgressArgs>();
+
+			using(var progressForm = new ProgressForm(progress))
+			{
+				progressForm.Shown += async (_1, _2) =>
+				{
+					await TestAsyncProgressMethods.TestProgress(progress);
+					progressForm.Close();
+				};
+				
+				switch(progressForm.ShowDialog(this))
+				{
+					default:
+					case DialogResult.Cancel:
+						{
+							break;
+						}
+				}
+			}
+		}
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

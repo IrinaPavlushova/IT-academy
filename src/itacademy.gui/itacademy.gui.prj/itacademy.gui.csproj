@@ -64,6 +64,9 @@
     <Compile Include="IC.cs" />
     <Compile Include="IMainFormFactory.cs" />
     <Compile Include="IViewResolver.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\LogManager.cs" />
+    <Compile Include="Logging\LogCreator.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

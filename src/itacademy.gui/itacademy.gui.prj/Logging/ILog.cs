@@ -22,7 +22,6 @@ namespace itacademy.gui.Logging
 		//#region Properties
 		//bool IsDebugEnabled { get; }
 		//bool IsErrorEnabled { get; }
-		//bool IsFatalEnabled { get; }
 		//bool IsInfoEnabled { get; }
 		//bool IsTraceEnabled { get; }
 		//bool IsWarnEnabled { get; }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace itacademy.gui.Logging
 {
@@ -24,6 +20,7 @@ namespace itacademy.gui.Logging
 		#endregion
 
 		#region .ctor
+
 		public LogCreator()
 		{
 			_directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "IT_Academy/Log");
@@ -41,7 +38,7 @@ namespace itacademy.gui.Logging
 		public static void LogFileBuilder()
 		{
 			DateTime dateTimeNow = DateTime.Now;
-			String newFile = _directory + @"\" + dateTimeNow.ToString("ddMMyyHHmmss") + ".old";
+			string newFile = _directory + @"\" + dateTimeNow.ToString("ddMMyyHHmmss") + ".old";
 			_fileInfo = new FileInfo(_path);
 
 			if(_fileInfo.Length > FILE_SIZE)
@@ -53,11 +50,6 @@ namespace itacademy.gui.Logging
 				}
 				else
 				{
-					// Почему не вызвать просто File.Delete(newFile)?
-					/**
-					_fileInfo = new FileInfo(_directory + @"\" + dateTimeNow.ToString("ddMMyyHHmmss") + ".old");
-					_fileInfo.Delete();
-					/**/
 					File.Move(_path, newFile);
 					File.SetCreationTime(newFile, dateTimeNow);
 				}

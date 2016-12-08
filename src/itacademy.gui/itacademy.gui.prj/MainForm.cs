@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itacademy.gui.ProgressBar;
 
 namespace itacademy.gui
 {
@@ -92,25 +93,30 @@ namespace itacademy.gui
 
 		private void OnButtonProgressBar(object sender, EventArgs e)
 		{
-			var progress = new Progress<ProgressArgs>();
+			ProgressBarForm progressBarForm = new ProgressBarForm();
+			progressBarForm.Show();
 
-			using(var progressForm = new ProgressForm(progress))
-			{
-				progressForm.Shown += async (_1, _2) =>
-				{
-					await TestAsyncProgressMethods.TestProgress(progress);
-					progressForm.Close();
-				};
-				
-				switch(progressForm.ShowDialog(this))
-				{
-					default:
-					case DialogResult.Cancel:
-						{
-							break;
-						}
-				}
-			}
+			#region
+			//var progress = new Progress<ProgressArgs>();
+
+			//using(var progressForm = new ProgressForm(progress))
+			//{
+			//	progressForm.Shown += async (_1, _2) =>
+			//	{
+			//		await TestAsyncProgressMethods.TestProgress(progress);
+			//		progressForm.Close();
+			//	};
+
+			//	switch(progressForm.ShowDialog(this))
+			//	{
+			//		default:
+			//		case DialogResult.Cancel:
+			//			{
+			//				break;
+			//			}
+			//	}
+			//}
+			#endregion 
 		}
 
 		private void MainForm_Load(object sender, EventArgs e)

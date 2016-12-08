@@ -1,6 +1,6 @@
-﻿namespace itacademy.gui
+﻿namespace itacademy.gui.ProgressBar
 {
-	partial class ProgressForm
+	partial class ProgressBarForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -47,8 +47,8 @@
 			this._pnlContainer.Dock = System.Windows.Forms.DockStyle.Top;
 			this._pnlContainer.Location = new System.Drawing.Point(0, 0);
 			this._pnlContainer.Name = "_pnlContainer";
-			this._pnlContainer.Size = new System.Drawing.Size(458, 65);
-			this._pnlContainer.TabIndex = 7;
+			this._pnlContainer.Size = new System.Drawing.Size(496, 65);
+			this._pnlContainer.TabIndex = 9;
 			// 
 			// _pnlLine
 			// 
@@ -57,7 +57,7 @@
 			this._pnlLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
 			this._pnlLine.Location = new System.Drawing.Point(0, 64);
 			this._pnlLine.Name = "_pnlLine";
-			this._pnlLine.Size = new System.Drawing.Size(458, 1);
+			this._pnlLine.Size = new System.Drawing.Size(496, 1);
 			this._pnlLine.TabIndex = 2;
 			// 
 			// _lblText
@@ -75,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this._progressBar.Location = new System.Drawing.Point(12, 31);
 			this._progressBar.Name = "_progressBar";
-			this._progressBar.Size = new System.Drawing.Size(434, 18);
+			this._progressBar.Size = new System.Drawing.Size(472, 18);
 			this._progressBar.TabIndex = 0;
 			// 
 			// panel1
@@ -83,43 +83,40 @@
 			this.panel1.BackColor = System.Drawing.SystemColors.Control;
 			this.panel1.Controls.Add(this._btnCancel);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel1.Location = new System.Drawing.Point(0, 64);
+			this.panel1.Location = new System.Drawing.Point(0, 65);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(458, 40);
-			this.panel1.TabIndex = 8;
+			this.panel1.Size = new System.Drawing.Size(496, 40);
+			this.panel1.TabIndex = 10;
 			// 
 			// _btnCancel
 			// 
 			this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this._btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this._btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this._btnCancel.Location = new System.Drawing.Point(376, 9);
+			this._btnCancel.Location = new System.Drawing.Point(414, 9);
 			this._btnCancel.Name = "_btnCancel";
 			this._btnCancel.Size = new System.Drawing.Size(75, 23);
 			this._btnCancel.TabIndex = 3;
 			this._btnCancel.Text = "Cancel";
 			this._btnCancel.UseVisualStyleBackColor = true;
-			this._btnCancel.Click += new System.EventHandler(this.OnCancelClick);
+			this._btnCancel.Click += new System.EventHandler(this._btnCancel_Click);
 			// 
-			// ProgressForm
+			// ProgressBarForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-			this.CancelButton = this._btnCancel;
-			this.ClientSize = new System.Drawing.Size(458, 104);
+			this.ClientSize = new System.Drawing.Size(496, 105);
 			this.ControlBox = false;
 			this.Controls.Add(this._pnlContainer);
 			this.Controls.Add(this.panel1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
-			this.Name = "ProgressForm";
+			this.Name = "ProgressBarForm";
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "ProgressForm";
-			this.Load += new System.EventHandler(this.ProgressForm_Load);
+			this.Text = "ProgressBarForm";
+			this.Load += new System.EventHandler(this.ProgressBarForm_Load);
 			this._pnlContainer.ResumeLayout(false);
 			this._pnlContainer.PerformLayout();
 			this.panel1.ResumeLayout(false);

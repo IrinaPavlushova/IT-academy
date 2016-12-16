@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using itacademy.gui.Logging;
 
 namespace itacademy.gui
 {
@@ -116,6 +117,25 @@ namespace itacademy.gui
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		private void OnButtonTestLog_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				int j = -1;
+				j++;
+				int i = 1 / j;
+			}
+			catch(Exception ex)
+			{
+				LogCreator.Log.Error(ex);
+				LogCreator.Log.Fatal("You've been slain!", ex);
+				LogCreator.Log.Info("You are dumb – divizion by zero.");
+				LogCreator.Log.Warning("Prepare Uranus", ex);
+				LogCreator.Log.Error("Qwerty", ex);
+				MessageBox.Show(this, "Олярм!111 Mistake");
+			}
 		}
 	}
 }

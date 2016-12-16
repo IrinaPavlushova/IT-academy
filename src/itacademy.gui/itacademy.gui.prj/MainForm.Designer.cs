@@ -36,6 +36,7 @@
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this._btnProgressBar = new System.Windows.Forms.Button();
+			this._btnTestLog = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -101,12 +102,23 @@
 			this._btnProgressBar.UseVisualStyleBackColor = true;
 			this._btnProgressBar.Click += new System.EventHandler(this.OnButtonProgressBar);
 			// 
+			// _btnTestLog
+			// 
+			this._btnTestLog.Location = new System.Drawing.Point(53, 170);
+			this._btnTestLog.Name = "_btnTestLog";
+			this._btnTestLog.Size = new System.Drawing.Size(100, 23);
+			this._btnTestLog.TabIndex = 6;
+			this._btnTestLog.Text = "buttonTestLog";
+			this._btnTestLog.UseVisualStyleBackColor = true;
+			this._btnTestLog.Click += new System.EventHandler(this.OnButtonTestLog_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.Window;
-			this.ClientSize = new System.Drawing.Size(318, 146);
+			this.ClientSize = new System.Drawing.Size(327, 252);
+			this.Controls.Add(this._btnTestLog);
 			this.Controls.Add(this._btnProgressBar);
 			this.Controls.Add(this.textBox2);
 			this.Controls.Add(this.label2);
@@ -132,6 +144,7 @@
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button _btnProgressBar;
+		private System.Windows.Forms.Button _btnTestLog;
 	}
 }
 

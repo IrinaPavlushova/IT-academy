@@ -23,6 +23,7 @@ namespace itacademy.gui
 
 		public void Run()
 		{
+			
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);

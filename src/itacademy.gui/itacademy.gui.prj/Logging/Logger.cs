@@ -3,6 +3,13 @@ using System.IO;
 
 namespace itacademy.gui.Logging
 {
+	/// <summary>Сервис содержащий профили пиложения.</summary>
+	/// <remarks>В кратце сервис необходим для регистрации папок приложения. Например, логи, конфиги и пр.</remarks>
+	public interface IApplicationProfileService
+	{
+
+	}
+
 	public class Logger : ILog
 	{
 		#region Data

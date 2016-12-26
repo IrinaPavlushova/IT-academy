@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itacademy.gui", "itacademy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{6BB512BE-F615-4406-908B-B2635161E687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITacademy.datastorage", "ITacademy.datastorage\ITacademy.datastorage.csproj", "{54E4506D-F4E6-49FB-8FFA-B57BE4CA57E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6BB512BE-F615-4406-908B-B2635161E687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BB512BE-F615-4406-908B-B2635161E687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BB512BE-F615-4406-908B-B2635161E687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E4506D-F4E6-49FB-8FFA-B57BE4CA57E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E4506D-F4E6-49FB-8FFA-B57BE4CA57E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E4506D-F4E6-49FB-8FFA-B57BE4CA57E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E4506D-F4E6-49FB-8FFA-B57BE4CA57E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
